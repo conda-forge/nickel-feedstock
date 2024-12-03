@@ -1,0 +1,37 @@
+context:
+  version: 1.9.0
+
+package:
+  name: nickel
+  version: ${{ version }}
+
+source:
+  url: https://github.com/tweag/nickel/archive/${{ version }}.tar.gz
+  sha256: c5c0000e6b1618921c1ce23dc90eefb482bdfe9f9716d4ef5cf24a3b99ec4c7d
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - cargo-bundle-licenses
+
+tests:
+  - script:
+      - nickel --help
+
+about:
+  license: MIT
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+  summary: Better configuration for less
+  homepage: https://github.com/tweag/nickel
+  repository: https://github.com/tweag/nickel
+
+extra:
+  recipe-maintainers:
+    - danielnachun
