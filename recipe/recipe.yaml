@@ -1,5 +1,5 @@
 context:
-  version: "1.15.1"
+  version: "1.16.0"
 
 package:
   name: nickel
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tweag/nickel/archive/${{ version }}.tar.gz
-  sha256: 93528c7b763f082767f4f6069b74f72345880ee6f5175f85ea8297d96d8797c3
+  sha256: 32a449ebc4d463dd193eb8ce8aced5324655188095e709a9c0addb7b3ceeaec3
 
 build:
   number: 0
